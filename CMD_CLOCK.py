@@ -55,7 +55,7 @@ def main():
         color = sys.argv[2]
     elif sys.argv[1].lower() == "fonts": # if user asks for fonts
         x = pyfiglet.FigletFont.getFonts()
-        for i in range(x):
+        for i in range(len(x)):
             print(x[i])
         exit()
     else: # set font to first arg
