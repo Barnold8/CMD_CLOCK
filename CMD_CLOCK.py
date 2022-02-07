@@ -24,7 +24,8 @@ def spacer(string):
 
 def sysType():
 
-    if(platform.system != "Windows"):
+    if(platform.system() != "Windows"):
+       
         return "clear"
     else:
         return "cls"
@@ -62,9 +63,10 @@ def main():
         font = sys.argv[1]
 
     clear = sysType()
+    print(platform.system())
 
     while(1):
-        os.system("clear")
+        os.system(clear)
         try:
             print(colored(pyfiglet.figlet_format(spacer(getTime()),font=font),color))
         except Exception as e:
