@@ -49,7 +49,7 @@ def main():
         info()
         exit()
     elif len(sys.argv) < 2:
-        font = slant # default font
+        font = "slant" # default font
     elif len(sys.argv) == 3: # If user defines font and color
         font = sys.argv[1]
         color = sys.argv[2]
